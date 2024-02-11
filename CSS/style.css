@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&family=Salsa&family=Varela+Round&display=swap');
+
+
+/* 
+font-family: "Varela Round", sans-serif;
+font-family: "Salsa", cursive;
+font-family: "Roboto Slab", serif;
+font-family: "Poppins", sans-serif;
+*/
+
+
+
+/* CSS RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(204, 43%, 53%);
+    /* background-color: hsl(0, 0%, 100%); */
+    font-family: "Salsa", cursive;
+    height: 100vh;
+}
+
+
+
+
+.weather-app {
+    background-color: white;
+    max-width: 600px;
+    /* max-height: 110vh; */
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 30px;
+    background: linear-gradient(#9ce3ff 0%, #efadb0 90%);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, .34);
+}
+
+
+
+/* Search Box Section Styling */
+.search-form{
+    display: flex;
+    align-items: center;
+}
+
+/* input[type="text"]{ */
+.search-form input{
+    flex: 1;
+    padding: 20px;
+    border: 2px solid #3498db;
+    border-radius: 15px;
+    font-size: 1rem;
+    font-family: inherit;
+    text-transform: capitalize;
+}
+
+.search-btn{
+    background-color: #3498db;
+    border: none;
+    padding: 15px;
+    border-radius: 15px;
+    cursor: pointer;
+    color: white;
+    margin-left: 10px;
+    transition: background-color .3s ease-in;
+}
+
+.search-btn:hover{
+    background-color: #2282c3;
+}
+
+
+
+
+/* Details Section about your Enter Location Section Styling */
+.city-date-section{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.city-date-section .city{
+    font-size: 2rem;
+    opacity: .9;
+}
+
+.city-date-section .date{
+    background-color: #c3eaf4;
+    padding: 5px 10px;
+    border-radius: 25px;
+}
+
+
+
+
+/* Temperature Show Case Container Section Styling */
+.temperature-info{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.temperature-info .description{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.temperature-info .description i{
+    font-size: 1.5rem;
+    opacity: .7;
+}
+
+.temperature-info .description span{
+    font-size: 1.5rem;
+}
+
+.temperature-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.temperature-box .temperature{
+    font-size: 9rem;
+}
+sup{
+    font-size: 2.5rem;
+}
+
+.temperature-info .feels-like{
+    background-color: #c3eaf4;
+    padding: 5px 10px;
+    border-radius: 25px;
+}
+
+
+
+
+/* Buttom most section items Styling */
+.additional-info{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* Container-1 ==> Shows the wind-informations(wind-info) */
+/* Container-2 ==> Shows the Humidity-informations(humidity-info) */
+/* Conatiner-3 ==> Shows the visibility-information(visibility-info) */
+.wind-info, .humidity-info, .visibility-info{
+    background-color: #ecf0f1;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 16px;
+    border-radius: 25px;
+    padding: 30px 20px;
+    /* box-shadow: 0 3px 8px rgba(0, 0, 0, .27); */
+    /* box-shadow: 3px 12px 21px rgba(0, 0, 0, .234); */
+    box-shadow: 0 0 3px #fff,
+                8px 8px 8px #ff5e66,
+                -3px -3px 15px #f0ecec;
+}
+
+.additional-info .material-icons{
+    font-size: 3rem;
+    opacity: .8;
+}
+
+.wind-info div,
+.humidity-info div, 
+.visibility-info div{
+    text-align: center;
+}
+
+
+
+
+/* footer section styling */
+footer{
+    background-color: black;
+    color: white;
+}
+
+footer .footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/* Making all The Device Responsive */
+@media screen and (max-width:680px) {
+    .weather-app{
+        max-width: 90vw;
+        max-height: 110vh;
+    }
+}
+@media screen and (max-width: 600px) {
+    .wind-info, .humidity-info, .visibility-info{
+        width: 21vw;
+        height: 30vh;
+    }
+}
+@media screen and (max-width: 400px) {
+    .footer{
+        font-size: 15px;
+    }
+}
